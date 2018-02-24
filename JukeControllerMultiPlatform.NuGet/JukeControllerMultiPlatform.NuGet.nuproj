@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCFC03DC-D863-4F43-B564-D6C7116B86CA}</ProjectGuid>
+    <Description>JukeControllerMultiPlatform</Description>
+    <PackageId>JukeControllerMultiPlatform</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>asbjornandersen</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>JukeControllerMultiPlatform</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>JukeControllerMultiPlatform.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JukeControllerMultiPlatform.Android\JukeControllerMultiPlatform.Android.csproj">
+      <Project>{B6C86502-E18D-485A-BA00-F2CB24844F8A}</Project>
+      <Name>JukeControllerMultiPlatform.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JukeControllerMultiPlatform.iOS\JukeControllerMultiPlatform.iOS.csproj">
+      <Project>{0A6ABED2-8F92-407C-85A7-B10A784231FC}</Project>
+      <Name>JukeControllerMultiPlatform.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.0</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

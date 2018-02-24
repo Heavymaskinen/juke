@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{2A57CC41-31C3-4462-8F7F-C169C1A27883}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>JukeControllerMultiPlatform</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Control\JukeController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Library.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\LibraryBrowser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Player.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\PlayerEngine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\PlayerEngineFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\SongQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\AsyncSongLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\LoadHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\PersistedSong.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\SongCatalogue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\SongConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\SongLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\SongWriter.cs" />
+  </ItemGroup>
+</Project>
